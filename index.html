@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather App</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TweenMax.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="images/mist.png">
+</head>
+
+<body>
+    <div class="background">
+        <div class="weather-title">
+            KNOW YOUR <br> WEATHER!!
+        </div>
+        <form action="/nowhere" id="city-name">
+            <div class="search-container">
+                <input type="search" class="search-input" placeholder="Enter City" spellcheck="false">
+                <button id="button1"><img src="search.png"></button>
+            </div>
+        </form>
+        <div class="weather">
+            <div class="weather-info">
+                <div class="basic">
+                    <h1 class="city"></h1>
+                    <div class="temperature"></div>
+                    <div class="description"></div>
+                    <div class="icon"></div>
+                </div>
+                <div class="advanced">
+                    <div class="pic"><img src="humidity.png"></div>
+                    <div class="humidity"></div>
+                    <div>Humidity</div>
+                    <br>
+                    <div class="pic"><img src="wind.png"></div>
+                    <div class="wind"></div>
+                    <div>Wind Speed</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+        integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
