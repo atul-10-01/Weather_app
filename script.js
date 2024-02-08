@@ -18,22 +18,24 @@ document.addEventListener("DOMContentLoaded", function () {
     
     loadingAnimation(0.4);
 
-    async function getWeatherData(city) {
-        try {
-            const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`);
-            const data = await response.json();
+   async function getWeatherData(city) {
+    try {
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`);
+        const data = await response.json();
 
-            if (response.ok) {
-                displayWeather(data);
-            } else {
-                console.error("Error fetching weather data:", data.message);
-                weatherInfo.innerHTML = `<p>Error: ${data.message}</p>`;
-            }
-        } catch (error) {
-            console.error("Error fetching weather data:", error.message);
-            weatherInfo.innerHTML = `<p>Error: ${error.message}</p>`;
+        if (response.ok) {
+            displayWeather(data);
+            weatherInfo.innerHTML = '';
+        } else {
+            console.error("Error fetching weather data:", data.message);
+            weatherInfo.innerHTML = `<p>Error: ${data.message}</p>`;
         }
+    } catch (error) {
+        console.error("Error fetching weather data:", error.message);
+        weatherInfo.innerHTML = `<p>Error: ${error.message}</p>`;
     }
+}
+
 
     function displayWeather(data) {
         const temperature = Math.round(data.main.temp - 273.15);
