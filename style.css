@@ -165,6 +165,10 @@ body .background {
         height: 1.2vh;
     }
 
+     .search-input {
+        font-size: 4vw;
+    }
+
     #button1 img {
         max-height: 1.3em;
     }
